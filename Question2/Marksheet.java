@@ -9,11 +9,12 @@ public class Marksheet{
 
     public float average(){
         int sum = 0; 
+        float average = 0; 
         for(int num:this.grades){
             sum += num; 
         }
         try{
-            float average = (float)(sum/this.grades.size()); 
+            average = (float)(sum/this.grades.size()); 
         }catch(ArithmeticException e){
             System.out.println("Division by 0"); 
         }
@@ -27,7 +28,7 @@ public class Marksheet{
         return max; 
     }
     public int minimum(){
-        int min = 0; 
+        int min = Integer.MAX_VALUE; 
         for(int num: this.grades){
             min = Math.min(min,num); 
         }
@@ -35,13 +36,14 @@ public class Marksheet{
     }
     public float studentsPassedPercentage(){
         int count = 0; 
+        float percentage = 0; 
         for(int num: this.grades){
             if(num>=40){
                 count+=1; 
             }
         }
         try{
-            float percentage = (count*100)/this.grades.size();
+            percentage = (count*100)/this.grades.size();
         }catch(ArithmeticException e){
             System.out.println("Division by 0"); 
         }

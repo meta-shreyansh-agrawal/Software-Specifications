@@ -1,3 +1,5 @@
+import java.util.Scanner; 
+import java.util.InputMismatchException; 
 public class Utils{
     public static int inputNumberInRange(Scanner sc,int start,int end){
         while(true){
