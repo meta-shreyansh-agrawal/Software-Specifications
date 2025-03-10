@@ -1,6 +1,5 @@
 import java.util.Scanner; 
 import java.util.InputMismatchException;
-
 public class Utils{
     public static double inputDouble(Scanner sc){
         double d = 0; 
@@ -9,12 +8,14 @@ public class Utils{
             try{
                 d = sc.nextDouble(); 
                 if(d<0){
-                    System.out.println("Enter value greater than 0"); 
-                }else{
+                    throw new IllegalArgumentException("Enter double value greater than 0"); 
+                }else{  
                     isValid = true; 
                 }
             }catch(InputMismatchException e){
                 System.out.println("Enter valid value"); 
+            }catch(IllegalArgumentException e){
+                System.out.println(e.getMessage()); 
             }
         }while(!isValid);
         return d; 
@@ -24,12 +25,14 @@ public class Utils{
             try{
                 int num = sc.nextInt(); 
                 if(num<start||num>end){
-                    System.out.println("Enter number between "+start+" and "+end); 
+                    throw new IllegalArgumentException(); 
                 }else{
                     return num; 
                 }
             }catch(InputMismatchException e){
                 System.out.println("Enter valid Number"); 
+            }catch(IllegalArgumentException e){
+                System.out.println("Enter number between "+start+" and "+end); 
             }
         }
     }
