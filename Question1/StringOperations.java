@@ -1,4 +1,10 @@
 public class StringOperations {
+
+    /**
+     * @param a first string to compare
+     * @param b string to compare to 
+     * @return  boolean based on strings are identical or not
+     */
     public static boolean isEqual(String a, String b){
         if(a.length()!=b.length()){
             return false; 
@@ -10,6 +16,11 @@ public class StringOperations {
         }
         return true;
     }
+
+    /**
+     * @param s input string to reverse
+     * @return  reversed s string
+     */
     public static String reverse(String s){
         String reverseString = ""; 
         for(int i = 0;i<s.length();i++){
@@ -17,6 +28,11 @@ public class StringOperations {
         }
         return reverseString; 
     }
+
+    /**
+     * @param s String in which the capital's should be converted to small and vice versa
+     * @return  modified string
+     */
     public static String replace(String s){
         String ans = ""; 
         for(int i = 0;i<s.length();i++){
@@ -32,6 +48,11 @@ public class StringOperations {
         }
         return ans; 
     }
+
+    /**
+     * @param input string input
+     * @return  largest word from the string
+     */
     public static String largestWord(String input){
         String[] words = input.split("\\s+");
             

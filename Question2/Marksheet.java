@@ -3,10 +3,18 @@ import java.lang.Math;
 
 public class Marksheet{
     ArrayList<Integer> grades; 
+
+    /**
+     * Only constructor of class
+     * @param grades list of integer grades fo students
+     */
     Marksheet(ArrayList<Integer> grades){
         this.grades = grades; 
     }
 
+    /**
+     * @return average of all grades
+     */
     public float average(){
         int sum = 0; 
         float average = 0; 
@@ -20,6 +28,11 @@ public class Marksheet{
         }
         return average; 
     }
+
+    /**
+     * 
+     * @return maximum of all grades
+     */
     public int maximum(){
         int max = 0; 
         for(int num: this.grades){
@@ -27,6 +40,11 @@ public class Marksheet{
         }
         return max; 
     }
+
+    /**
+     * 
+     * @return minimum of all grades
+     */
     public int minimum(){
         int min = Integer.MAX_VALUE; 
         for(int num: this.grades){
@@ -34,6 +52,11 @@ public class Marksheet{
         }
         return min; 
     }
+
+    /**
+     * 
+     * @return percentage of students passed above 40 percent
+     */
     public float studentsPassedPercentage(){
         int count = 0; 
         float percentage = 0; 
