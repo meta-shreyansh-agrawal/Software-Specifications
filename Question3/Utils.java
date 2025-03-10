@@ -8,7 +8,7 @@ public class Utils{
             try{
                 d = sc.nextDouble(); 
                 if(d<0){
-                    throw new IllegalArgumentException("Enter double value greater than 0"); 
+                    throw new IllegalArgumentException("Enter double value greater than 0");    
                 }else{  
                     isValid = true; 
                 }
