@@ -14,8 +14,10 @@ public class Utils{
                 }
             }catch(InputMismatchException e){
                 System.out.println("Enter valid value"); 
+                sc.nextLine(); 
             }catch(IllegalArgumentException e){
                 System.out.println(e.getMessage()); 
+                sc.nextLine(); 
             }
         }while(!isValid);
         return d; 
@@ -31,8 +33,10 @@ public class Utils{
                 }
             }catch(InputMismatchException e){
                 System.out.println("Enter valid Number"); 
+                sc.nextLine(); 
             }catch(IllegalArgumentException e){
                 System.out.println("Enter number between "+start+" and "+end); 
+                sc.nextLine(); 
             }
         }
     }
